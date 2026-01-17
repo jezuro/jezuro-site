@@ -86,11 +86,19 @@ a {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 1023px) {
+  .menuWrap .nav-icon {
+    right: 4vw;
+  }
+}
+
 span.site-menu {
   font-size: 3vw;
   line-height: 1;
   cursor: pointer;
 }
+
+// Menu Three Bars
 
 .site-menu span {
   transition-duration: 0.5s;
@@ -102,18 +110,35 @@ span.site-menu {
   background-color: #fff;
 }
 
-// Menu Three Bars
+@media only screen and (max-width: 1023px) {
+  .site-menu span {
+    height: 0.75vw;
+    width: 7vw;
+  }
+}
 
 .site-menu span:nth-child(1) {
   top: 0vw;
 }
 
 .site-menu span:nth-child(2) {
-    top: 0.65vw;
+  top: 0.65vw;
+}
+
+@media only screen and (max-width: 1023px) {
+  .site-menu span:nth-child(2) {
+    top: 2.2vw;
+  }
 }
 
 .site-menu span:nth-child(3) {
-    top: 1.4vw;
+  top: 1.4vw;
+}
+
+@media only screen and (max-width: 1023px) {
+  .site-menu span:nth-child(3) {
+    top: 4.4vw;
+  }
 }
 
 .nav-icon.menu-button.toggler-open .site-menu span:nth-child(1) {
@@ -140,6 +165,12 @@ span.site-menu {
 
 // End Menu Bars
 
+@media only screen and (max-width: 1023px) {
+  .nav-icon.menu-button.toggler-open {
+    top: 2vw;
+    right: 0vw;
+  }
+}
 
 .menu-items {
   display: none;
@@ -149,10 +180,30 @@ span.site-menu {
 .menu-items a {
   color: #ffffff;
   font-size: 1.5vw;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
   margin-bottom: 1vw;
   display: block;
+  font-family: "Lato", sans-serif;
+}
+
+@media only screen and (max-width: 1023px) {
+  .menu-items a {
+    font-family: "Lato", sans-serif;
+    color: #ffffff;
+    font-size: 5vw;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5vw;
+    display: block;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) {
+  .menu-items a {
+    margin-bottom: 0vw;
+    font-size: 3vw;
+  }
 }
 
 .menuWrap .nav-icon:hover,.menu-items a:hover{
@@ -163,6 +214,14 @@ span.site-menu {
   display: block;
   margin-top: 5vw;
   text-align: right;
+}
+
+@media only screen and (max-width: 1023px) {
+  .nav-icon.menu-button.toggler-open ~ .menu-items {
+    display: block;
+    margin-top: 30vw;
+    text-align: right;
+  }
 }
 
 //
