@@ -1,10 +1,45 @@
 $(window).ready(() => {
 
-   /* let year = new Date().getFullYear();
-    $("#year").text(year);
-    $("#year-desk").text(year);*/
-    // for owl carousel
+    // for menu
 
+    $(".nav-icon").click(function() {
+        if ($(".menu-button").hasClass("toggler-open")) {
+            $(".menu-button").removeClass("toggler-open") 
+        } 
+        else {
+            $(".menu-button").addClass("toggler-open") 
+        } 
+    })
+
+    $(".menu a").click(function() {
+        $(".menu-button").removeClass("toggler-open");
+    })
+    $(".menu li a[href*='#']:not([href='#'])").click(function() {
+        var target = $(this.hash);
+        hashValue = this.hash.substr(1);
+        $('.menu li a').removeClass("active");
+        $(this).addClass("active");
+        var navActiveCurrent = '/#' + hashValue;
+        $('.menu li a[href="' + navActiveCurrent + '"]').addClass("active");
+        $(this).addClass("active");
+        if ($(window).width() > 767) {
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top - 42
+                }, 1000);
+            }
+        } else {
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top - 60
+                }, 1000);
+            }
+        }
+    });
+
+
+
+    // for owl carousel
     $(".music-carousel .owl-carousel").owlCarousel({
         //loop: true,
         margin: 10,
@@ -81,7 +116,6 @@ jQuery(document).ready(function () {
         jQuery(this).find('.videowrap').click(function (event) {
             event.preventDefault();
             jQuery(this).parents(".item").find(".overlay-img").hide();
-            // jQuery(this).parents(".item").find(".gradient").hide();
             var youtubeID = jQuery(this).parents(".item").find('.videoPlayer').attr('data-video-id');
             count++;
 
