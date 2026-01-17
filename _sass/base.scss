@@ -129,6 +129,39 @@ a {
   font-size: 3.07vw;
 }
 
+ .logo.mobileLogo {
+  display: none;
+}
+
+h2#site-name {
+  margin: 0;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .logo.mobileLogo {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    transform: none;
+  }
+
+  .logo {
+    width: 43%;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 20px;
+  }
+
+  .logo a {
+    font-size: 5vw;
+  }
+
+  .logo.desktopLogo {
+    display: none;
+  }
+}
 
 .cta-wrapper {
   display: block;
