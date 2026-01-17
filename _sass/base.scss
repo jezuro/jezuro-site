@@ -1,4 +1,4 @@
-$backgroundColor: #000000;
+$backgroundColor: #0d0d18;  
 $bodyColor: #000000;
 $bodyFont: "Bebas Neue",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 $logoFont: "Dela Gothic One",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -28,7 +28,7 @@ body {
 @media (max-width: 1024px) and (orientation: portrait) {
 
   .music-section, .video-section, .photo-section, .mlist-section-wrapper, .footer-section-wrapper {
-    margin-bottom: 50px;
+    //margin-bottom: 50px;
   }
 
   .header-section {
@@ -273,7 +273,7 @@ h2#site-name {
     margin: 0 auto;
     left: 0;
     right: 0;
-    top: 3vw;
+    top: 2vw;
   }
 
   .logo a {
@@ -477,7 +477,7 @@ h2#site-name {
 }
 
 .music-section-wrapper, .videos-section-wrapper, .about-section-wrapper {
-    background: #0d0d18;
+    background: $backgroundColor;
 }
 
 .music-section, .about-section {
@@ -556,7 +556,7 @@ h2#site-name {
   }
 }
 
-.owl-carousel.owl-loaded {
+.no-js .owl-carousel, .owl-carousel.owl-loaded {
   display: block;
 }
 
@@ -672,7 +672,7 @@ h2#site-name {
   margin-left: 0.5vw;
 }
 
-.owl-nav {
+.music-section .owl-nav {
   display:none;
 }
 
@@ -806,6 +806,222 @@ h2#site-name {
     line-height: 1;
     margin-top: 13px;
     width: 55%;
+  }
+}
+
+//
+// VIDEOS
+//
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .video-section {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .video-section2 {
+    //margin-top: 50px;
+  }
+}
+
+.video-carousel {
+  position: relative;
+  max-width: 97%;
+  margin: 10vh auto;
+  margin: 0 auto;
+  padding-bottom: 10vh;
+  padding-top: 0;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .video-carousel {
+    margin-top: 0;
+    margin-left: 0;
+    padding-bottom: 5vh;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .video-carousel {
+    margin-bottom: 0;
+    max-width: 100%;
+  }
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.overlay-img, .video-container iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div#overlay-img-1 img, div#overlay-img-2 img {
+    width: 100%;
+    height: auto;
+}
+
+.video-titles {
+    font-size: 50px;
+    width: 100%;
+    text-align: left;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-family: $bodyFont;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.video-titles {
+    background: url(../img/VideoPlayWhiteBig.svg) no-repeat;
+    padding-left: 7%;
+    background-size: contain;
+    position: absolute;
+    bottom: 5vh;
+    left: 8vh;
+    width: 16%;
+    cursor: pointer;
+    background-size: auto;
+    background-position: left center;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .videocarousel .video-titles {
+    position: absolute;
+    top: 56%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+    width: 50% !important;
+    font-size: 36px;
+    padding-left: 10%;
+    background-size: 43% auto;
+    background-position: left center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+}
+
+.video-titles:hover {
+  color: #fff;
+}
+
+.video-titles:hover {
+  background: url(../img/videoplayHover.png) no-repeat;
+  color: #fff;
+  background-size: contain;
+  background-position: left center;
+}
+
+@media only screen and (min-width: 1024px) {
+  .video-titles:hover {
+    background: url(../img/videoplayHover.png) no-repeat;
+    color: #fff;
+    background-size: auto;
+    background-position: left center;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .video-titles {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+  }
+}
+
+.container .video-section .owl-theme .owl-nav {
+  top: auto;
+  bottom: 0.5vh;
+  right: 0vh;
+  position: absolute;
+  margin: 0;
+}
+
+.container .video-section .owl-carousel .owl-nav button.owl-prev, .container .video-section .owl-carousel .owl-nav button.owl-next {
+  background: #ffffff;
+  border: 0.1px solid rgba(13, 21, 24, 0.3);
+  position: static;
+}
+
+.video-carousel .owl-nav .owl-prev span {
+  background: url(../img/chevronleft.svg) no-repeat scroll 0 0 transparent;
+  background-size: 90% auto;
+  width: 1.5vw;
+  height: 1.2vw;
+  display: inline-block;
+  font-size: 0;
+  z-index: 10;
+}
+
+.container .video-section .owl-carousel .owl-nav button.owl-prev, .container .video-section .owl-carousel .owl-nav button.owl-next {
+  background: #ffffff;
+  border: 0.1px solid rgba(13, 21, 24, 0.3);
+  position: static;
+}
+
+.video-carousel .owl-nav .owl-next span {
+  background: url(../img/chevronright.svg) no-repeat scroll 0 0 transparent;
+  background-size: 90% auto;
+  width: 1.5vw;
+  height: 1.2vw;
+  display: inline-block;
+  font-size: 0;
+  z-index: 10;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  body .container .video-section .owl-theme .owl-nav {
+    top: auto;
+    bottom: 50%;
+    left: 1.7vw;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .container .video-section .owl-carousel .owl-nav button.owl-prev, .container .video-section .owl-carousel .owl-nav button.owl-next {
+    top: auto;
+    height: 6vw;
+    width: 6vw;
+    background: transparent;
+    left: 1vw;
+    position: absolute;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .video-carousel .owl-nav .owl-prev span {
+    background: url(../img/chevronleftWhite.svg) no-repeat scroll 0 0 transparent;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .video-carousel .owl-nav .owl-prev span, .video-carousel .owl-nav .owl-next span {
+    background-size: 99% auto;
+    width: 7vw;
+    height: 8vw;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .container .video-section .owl-carousel .owl-nav button.owl-next {
+    left: auto;
+    right: 4vw;
+    height: 6vw;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .video-carousel .owl-nav .owl-next span {
+    background: url(../img/chevronrightWhite.svg) no-repeat scroll 0 0 transparent;
   }
 }
 
