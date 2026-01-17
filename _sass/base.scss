@@ -53,7 +53,22 @@ body {
   }
 }
 
+li {
+  list-style: none;
+}
 
+a {
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  font-weight: 600;
+}
+
+//
+// MENU
+//
 
 .menuWrap {
   position: absolute;
@@ -77,21 +92,58 @@ span.site-menu {
   cursor: pointer;
 }
 
+.site-menu span {
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  position: absolute;
+  height: 0.25vw;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+// Menu Three Bars
+
+.site-menu span:nth-child(1) {
+  top: 0vw;
+}
+
+.site-menu span:nth-child(2) {
+    top: 0.65vw;
+}
+
+.site-menu span:nth-child(3) {
+    top: 1.4vw;
+}
+
+.nav-icon.menu-button.toggler-open .site-menu span:nth-child(1) {
+  top: 1vw;
+  -webkit-transform: rotateZ(45deg) translate(0.35vw, 0.78vw);
+  transform: rotateZ(45deg) translate(0vw, -0.60vw);
+  right: 0;
+}
+
+.nav-icon.menu-button.toggler-open .site-menu span:nth-child(2) {
+  top: 0.8vw;
+  -webkit-transform: rotateZ(-43deg) translate(0.07vw, -0.325vw);
+  transform: rotateZ(-43deg) translate(0.07vw, 0vw);
+  right: 1vw;
+  opacity: 0;
+}
+
+.nav-icon.menu-button.toggler-open .site-menu span:nth-child(3) {
+  top: 1vw;
+  -webkit-transform: rotateZ(-43deg) translate(-0.9vw, -1.325vw);
+  transform: rotateZ(-43deg) translate(0.6vw, -0.1vw);
+  right: 0;
+}
+
+// End Menu Bars
+
+
 .menu-items {
   display: none;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  font-weight: 400;
-  font-style: normal;
-  color: #ffffff;
-  text-decoration: none;
-  transition: all 0.5s ease-in-out;
-  font-weight: 600;
+  z-index: 3000;
 }
 
 .menu-items a {
@@ -103,8 +155,19 @@ a {
   display: block;
 }
 
+.menuWrap .nav-icon:hover,.menu-items a:hover{
+  opacity: 0.5;
+}
 
+.nav-icon.menu-button.toggler-open ~ .menu-items {
+  display: block;
+  margin-top: 5vw;
+  text-align: right;
+}
 
+//
+// LOGO
+//
 
 .logo {
   margin: 0 auto;
@@ -162,6 +225,10 @@ h2#site-name {
     display: none;
   }
 }
+
+//
+// Call to action
+//
 
 .cta-wrapper {
   display: block;
@@ -336,6 +403,10 @@ h2#site-name {
   }
 }
 
+//
+// SECTIONS
+//
+
 .music-section-wrapper {
     padding-bottom: 8vh;
 }
@@ -405,6 +476,10 @@ h2#site-name {
     text-align: center;
   }
 }
+
+//
+// CAROUSEL
+//
 
 .music-carousel {
   opacity: 1 !important;
@@ -674,6 +749,10 @@ h2#site-name {
     width: 55%;
   }
 }
+
+//
+// FOOTER
+//
 
 .video-section, .about-section, .footer-section-wrapper {
   opacity: 1;
