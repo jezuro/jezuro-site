@@ -2,6 +2,11 @@ $backgroundColor: #0d0d18;
 $bodyColor: #000000;
 $bodyFont: "Bebas Neue",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 $logoFont: "Dela Gothic One",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$menuItemsFont: "Lato",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$socialColor: #7475b3;
+$footerColor: #ede7dd;
+$transitionSpeed: 0.25s;
+$transitionMenuSpeed: 0.5s;
 
 html, body {
   margin: 0;
@@ -62,7 +67,7 @@ a {
   font-style: normal;
   color: #ffffff;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
+  transition: all $transitionSpeed ease-in-out;
   font-weight: 600;
 }
 
@@ -101,8 +106,8 @@ span.site-menu {
 // Menu Three Bars
 
 .site-menu span {
-  transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
+  transition-duration: $transitionMenuSpeed;
+  -webkit-transition-duration: $transitionMenuSpeed;
   position: absolute;
   height: 0.25vw;
   width: 100%;
@@ -122,7 +127,7 @@ span.site-menu {
 }
 
 .site-menu span:nth-child(2) {
-  top: 0.65vw;
+  top: 0.7vw;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -184,7 +189,7 @@ span.site-menu {
   line-height: 1;
   margin-bottom: 1vw;
   display: block;
-  font-family: "Lato", sans-serif;
+  font-family: $menuItemsFont;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -201,13 +206,14 @@ span.site-menu {
 
 @media (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) {
   .menu-items a {
-    margin-bottom: 0vw;
+    margin-bottom: 1vw;
     font-size: 3vw;
   }
 }
 
 .menuWrap .nav-icon:hover,.menu-items a:hover{
   opacity: 0.5;
+  transition:opacity $transitionSpeed;
 }
 
 .nav-icon.menu-button.toggler-open ~ .menu-items {
@@ -219,8 +225,14 @@ span.site-menu {
 @media only screen and (max-width: 1023px) {
   .nav-icon.menu-button.toggler-open ~ .menu-items {
     display: block;
-    margin-top: 30vw;
+    margin-top: 20vw;
     text-align: right;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) {
+  .nav-icon.menu-button.toggler-open ~ .menu-items {
+    margin-top: 7vw;
   }
 }
 
@@ -438,7 +450,7 @@ h2#site-name {
   font-style: normal;
   position: absolute;
   right: 0vw;
-  padding: 0.6vw 2vw;
+  padding: 0.6vw 2vw 0.3vw 2vw;
 }
 
 @media only screen and (max-width: 1024px) and (orientation: portrait) {
@@ -458,7 +470,7 @@ h2#site-name {
     font-size: 8vw;
     right: auto;
     display: block;
-    padding: 3.6vw 2vw;
+    padding: 3.6vw 2vw 3.3vw 2vw;
   }
 }
 
@@ -490,7 +502,7 @@ h2#site-name {
   margin-left: 0;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .music-section, .about-section {
     margin-left: 1.8vw;
   }
@@ -524,9 +536,9 @@ h2#site-name {
   text-align: left;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .title {
-    font-size: 19.23vw;
+    font-size: 15vw;
     text-align: center;
   }
   .music-section .title {
@@ -584,7 +596,7 @@ h2#site-name {
 }
 
 .owl-height {
-  transition: height .5s ease-in-out;
+  transition: height $transitionSpeed ease-in-out;
 }
 
 .owl-carousel .owl-stage {
@@ -629,9 +641,9 @@ h2#site-name {
 }
 
 .art img {
-  -moz-transition: 0.5s all ease-in-out;
-  -webkit-transition: 0.5s all ease-in-out;
-  transition: 0.5s all ease-in-out;
+  //-moz-transition: 0.5s all ease-in-out;
+  //-webkit-transition: 0.5s all ease-in-out;
+  //transition: 0.5s all ease-in-out;
 }
 
 .music-carousel img {
@@ -663,6 +675,15 @@ h2#site-name {
   letter-spacing: 0;
   color: #ffffff;
   margin-top: 1.9vh;
+
+  background: #fff;
+  color: #000000;
+  text-align: center;
+  line-height: 1;
+  font-size: 2.05vw;
+  font-weight: 400;
+  font-style: normal;
+  padding: .8vw 2vw .5vw 2vw;
 }
 
 .music-carousel .get-it-now a span {
@@ -806,6 +827,7 @@ h2#site-name {
     line-height: 1;
     margin-top: 13px;
     width: 55%;
+    padding: .8vw 2vw 0vw 2vw;
   }
 }
 
@@ -1036,7 +1058,7 @@ div#overlay-img-1 img, div#overlay-img-2 img {
 
 .footer-section-wrapper {
   margin-top: 0vw;
-  background-color: #D4CFCB;
+  background-color: $footerColor;
 }
 
 .footer-section {
@@ -1071,14 +1093,14 @@ div#overlay-img-1 img, div#overlay-img-2 img {
 
 .socials-section a {
   text-decoration: none;
-  color: #547384;
-  margin-right: 1.1vw;
-  font-size: 1.4vw;
+  color: $socialColor;
+  margin-right: 5vw;
+  font-size: 4vw;
 }
 
 .socials-section a:hover, .footer-section a:hover {
   opacity: 0.4;
-  transition: all 0.5s;
+  transition: all $transitionSpeed;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -1088,12 +1110,16 @@ div#overlay-img-1 img, div#overlay-img-2 img {
   }
 }
 
+.socials-section li:last-child a {
+  margin-right: 0;
+}
+
 .copyrightWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 1vh;
+  margin-top: 4vh;
 }
 
 span.copyright {
@@ -1102,11 +1128,11 @@ span.copyright {
 
 span.copyright, span.footer-links a, span.copyright, span.footer-links a {
   text-transform: capitalize;
-  color: #547384;
-  font-family: $bodyFont;
+  color: $socialColor;
+  font-family: $menuItemsFont;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.17vw;
+  font-size: 1.5vw;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -1118,9 +1144,9 @@ span.copyright, span.footer-links a, span.copyright, span.footer-links a {
   }
 
   span.copyright, span.footer-links a, span.copyright, span.footer-links a {
-    font-size: 4.1vw;
+    font-size: 3vw;
     display: inline-block;
-    margin-top: 2vw;
+    margin-top: 3vw;
   }
 
   span.copyright {
