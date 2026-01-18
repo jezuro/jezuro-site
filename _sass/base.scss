@@ -674,16 +674,17 @@ h2#site-name {
   font-style: normal;
   letter-spacing: 0;
   color: #ffffff;
-  margin-top: 1.9vh;
+  //margin-top: 1.9vh;
 
-  background: #fff;
-  color: #000000;
+  //background: #fff;
+  //color: #000000;
   text-align: center;
   line-height: 1;
   font-size: 2.05vw;
   font-weight: 400;
   font-style: normal;
   padding: .8vw 2vw .5vw 2vw;
+  border: .2vw white solid;
 }
 
 .music-carousel .get-it-now a span {
