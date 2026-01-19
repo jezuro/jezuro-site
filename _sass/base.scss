@@ -769,10 +769,6 @@ div#overlay-img-1 img, div#overlay-img-2 img {
   padding-right: 1vw;
 }
 
-.video-titles svg path {
-  d: path($playIcon);
-}
-
 .video-titles:hover svg path {
   d: path($playFillIcon);
 }
