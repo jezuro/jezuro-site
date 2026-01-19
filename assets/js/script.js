@@ -25,70 +25,43 @@ $(window).ready(() => {
         if ($(window).width() > 767) {
             if (target.length) {
                 $('html,body').animate({
-                    scrollTop: target.offset().top - 42
-                }, 1000);
+                    scrollTop: target.offset().top
+                }, 500);
             }
         } else {
             if (target.length) {
                 $('html,body').animate({
-                    scrollTop: target.offset().top - 60
-                }, 1000);
+                    scrollTop: target.offset().top
+                }, 500);
             }
         }
-    });
+    }); 
+});
 
 
+const swiperMusic = new Swiper('.swiper-music', {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    loop: true,
 
-    // for owl carousel
-    $(".music-carousel .owl-carousel").owlCarousel({
-        //loop: true,
-        margin: 10,
-        slideSpeed: 300,
-        smartSpeed: 1000,
-        paginationSpeed: 500,
-        autoHeight: true,
-        responsiveClass: true,
-        nav: true,
-        dots: false,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
-        responsive: {
-            0: {
-                items: 1.5,
-                center: true
-            },
-            640: {
-                items: 1.5,
-                center: true
-            },
-            1024: {
-                items: 3.5,
-                margin: 25                
-            }
-        }
-    });
+const swiperVideo = new Swiper('.swiper-video', {
+    slidesPerView: "auto",
+    //centeredSlides: true,
+    spaceBetween: 20,
+    loop: true,
 
-    $(".video-carousel .owl-carousel").owlCarousel({
-        loop: true,
-        slideSpeed: 300,
-        smartSpeed: 1000,
-        paginationSpeed: 500,
-        responsiveClass: true,
-
-        responsive: {
-            0: {
-                margin: 10,
-                items: 1,
-                nav: true,
-                dots: false,
-            },
-            768: {
-                margin: 39,
-                items: 1,
-                nav: true,
-                dots: false,
-            }
-        }
-    });
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 });
 
 var ytPlayers = [];
@@ -112,7 +85,7 @@ jQuery(document).ready(function () {
 
     /*video script start*/
     var count = 0;
-    jQuery(".video-carousel li").each(function () {
+    jQuery(".video-section").each(function () {
         jQuery(this).find('.videowrap').click(function (event) {
             event.preventDefault();
             jQuery(this).parents(".item").find(".overlay-img").hide();
@@ -126,7 +99,6 @@ jQuery(document).ready(function () {
             } else {
                 formYoutubePlayer(playerID, youtubeID);
             }
-            console.log("step4");
         });
     });
 
