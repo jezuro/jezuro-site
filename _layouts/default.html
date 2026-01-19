@@ -31,6 +31,10 @@
 
 
     <link rel="stylesheet" href="{{ "/assets/css/icomoon-style.css" | relative_url }}">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +45,7 @@
     <div class="container">
       <div class="logo mobileLogo">
         <h2 id="site-name" class="site-name site-name-front">
-          <a href="">JEZURO</a>
+          <a href="{{ site.url }}">JEZURO</a>
         </h2>
       </div>
       <div class="header-section">
@@ -70,7 +74,7 @@
         </div>
         <div class="logo desktopLogo">
           <h1 id="site-name" class="site-name site-name-front">
-            <a href="https://jezuro.com">JEZURO</a>
+            <a href="{{ site.url }}">JEZURO</a>
           </h1>
         </div>
         <div class="cta-wrapper">
@@ -86,7 +90,6 @@
           <div class="content_wrapper">
             <div class="cta_wrapper_title">  
               <span class="ctatitle line1">Cloud and Tifa</span>
-              <!-- <span class="ctatitle line3">Available Now</span>-->
             </div>
             <div class="cta_wrapper_listen_btn">
               <div class="listen-now">
@@ -102,24 +105,27 @@
             RELEASES
           </div>
           <div class="music-carousel">
-            <div class="owl-carousel owl-theme owl-loaded owl-drag">
-              <div class="owl-stage-outer owl-height" style="height: 518.539px;">
-                <div class="owl-stage" style="transform: translate3d(-4427px, 0px, 0px); transition: all; width: 17711px;">
-                  <div class="owl-item" style="width: 466.971px; margin-right: 25px;">
-                    <div class="item">
-                      <div class="art">
-                        <img src="./assets/img/upscaled_1500.jpg" alt="album art ">
-                      </div>
-                      <div class="song-title">Bad Mosquitoes</div>
-                      <div class="get-it-now">
-                        <a href="https://distrokid.com/hyperfollow/jezero1/bad-mosquitoes" target="_blank">listen now</a>
-                      </div>
+            <!-- Slider main container -->
+            <div class="swiper swiper-music">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="item">
+                    <div class="art">
+                      <img src="./assets/img/upscaled_1500.jpg" alt="album art ">
+                    </div>
+                    <div class="song-title">Bad Mosquitoes</div>
+                    <div class="get-it-now">
+                      <a href="https://distrokid.com/hyperfollow/jezero1/bad-mosquitoes" target="_blank">listen now</a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div>
-              <div class="owl-dots disabled"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
         </div>
@@ -128,62 +134,70 @@
 
       <div class="videos-section-wrapper" id="video">
         <div class="video-section video-section2">
-          <div class="video-carousel">
-            <div class="videocarousel">
-              <div class="owl-carousel owl-theme owl-loaded owl-drag">
-                <div class="owl-stage-outer">
-                  <div class="owl-stage" style="transform: translate3d(-8289px, 0px, 0px); transition: all; width: 33157px;">
-                    <!--<div class="owl-item cloned" style="width: 997.156px; margin-right: 39px;">
-                      <div class="item">
-                        <li>
-                          <div class="videowrap">
-                            <div class="video-container" id="api-container-03">
-                              <div class="videoPlayer" id="ytplayer2" data-video-id="iUGhCsXL5fs"></div>
-                            </div>
-                            <div class="overlay-img" id="overlay-img-2">
-                              <img src="./assets/img/yt-covers/tifa-lyric-yt-cover.jpg" alt="video0">
-                              <div class="video-titles">Cloud and Tifa</div>
-                            </div>
-                          </div>
-                        </li>
+          <!-- Slider main container -->
+          <div class="swiper swiper-video">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="item">
+                    <div class="videowrap">
+                      <div class="video-container" id="api-container-03">
+                        <div class="videoPlayer" id="ytplayer2" data-video-id="iUGhCsXL5fs"></div>
                       </div>
-                    </div>-->
-                    <div class="owl-item cloned" style="width: 997.156px; margin-right: 39px;">
-                      <div class="item">
-                        <li>
-                          <div class="videowrap">
-                            <div class="video-container" id="api-container-03">
-                              <div class="videoPlayer" id="ytplayer2" data-video-id="QXkMO_HHq3g"></div>
-                            </div>
-                            <div class="overlay-img" id="overlay-img-2">
-                              <img src="./assets/img/yt-covers/tifa-lyric-yt-cover.jpg" alt="video0">
-                              <div class="video-titles">Cloud and Tifa (Lyric Video)</div>
-                            </div>
-                          </div>
-                        </li>
+                      <div class="overlay-img" id="overlay-img-2">
+                        <img src="./assets/img/yt-covers/tifa-yt-cover.png" alt="video0">
+                        <div class="video-titles">
+                          <svg viewBox="0 0 32 32" fill="currentColor" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path id="playIcon" d="" />
+                          </svg>
+                          Cloud and Tifa
+                        </div>
                       </div>
                     </div>
-                    <div class="owl-item cloned" style="width: 997.156px; margin-right: 39px;">
-                      <div class="item">
-                        <li>
-                          <div class="videowrap">
-                            <div class="video-container" id="api-container-03">
-                              <div class="videoPlayer" id="ytplayer2" data-video-id="ZUvzxExwSkc"></div>
-                            </div>
-                            <div class="overlay-img" id="overlay-img-2">
-                              <img src="./assets/img/yt-covers/mosquito-yt-cover.jpg" alt="video0">
-                              <div class="video-titles">Bad Mosquitoes</div>
-                            </div>
-                          </div>
-                        </li>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div>
-                <div class="owl-dots disabled"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="item">
+                    <div class="videowrap">
+                      <div class="video-container" id="api-container-03">
+                        <div class="videoPlayer" id="ytplayer2" data-video-id="QXkMO_HHq3g"></div>
+                      </div>
+                      <div class="overlay-img" id="overlay-img-2">
+                        <img src="./assets/img/yt-covers/tifa-lyric-yt-cover.jpg" alt="video0">
+                        <div class="video-titles">
+                          <svg viewBox="0 0 32 32" fill="currentColor" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path id="playIcon" d="" />
+                          </svg>
+                          Cloud and Tifa (Lyric Video)
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="item">
+                    <div class="videowrap">
+                      <div class="video-container" id="api-container-03">
+                        <div class="videoPlayer" id="ytplayer2" data-video-id="ZUvzxExwSkc"></div>
+                      </div>
+                      <div class="overlay-img" id="overlay-img-2">
+                        <img src="./assets/img/yt-covers/mosquito-yt-cover.jpg" alt="video0">
+                        <div class="video-titles">
+                          <svg viewBox="0 0 32 32" fill="currentColor" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path id="playIcon" d="" />
+                          </svg>
+                          Bad Mosquitoes
+                        </div>
+                      </div>
+                    </div>
+                </div>
               </div>
             </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -214,7 +228,7 @@
     </div>
     <script src="https://libraries.wmgartistservices.com/externalJS/jquery-3-5-1-jquery-min.js"></script>
     <script src="https://libraries.wmgartistservices.com/externalJS/jquery-browser-0-1-0-jquery-browser-min.js" type="text/javascript"></script>
-    <script src="./assets/js/owl.carousel.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./assets/js/script.js" type="text/javascript"></script>
     <script src="./assets/js/ytloader.js" type="text/javascript"></script>
   </body>
