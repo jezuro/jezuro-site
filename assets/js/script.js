@@ -42,7 +42,7 @@ $(window).ready(() => {
 const swiperMusic = new Swiper('.swiper-music', {
     slidesPerView: "auto",
     spaceBetween: 20,
-    loop: true,
+    loop: false,
 
     // Navigation arrows
     navigation: {
