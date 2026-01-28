@@ -112,6 +112,7 @@ span.site-menu {
   width: 100%;
   border-radius: 20px;
   background-color: #fff;
+  box-shadow: 0px 0px 0px 5px black;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -183,6 +184,8 @@ span.site-menu {
 
 .menu-items a {
   color: #ffffff;
+  text-shadow: 0px 0px 20px #000000;
+  -webkit-text-stroke: .08vw black;
   font-size: 1.5vw;
   font-weight: 700;
   line-height: 1;
@@ -247,6 +250,7 @@ span.site-menu {
   transform: translate(-50%, -50%);
   z-index: 9;
   position: absolute;
+  text-shadow: 0px 0px 20px #000000;
 }
 
 .logo img {
@@ -395,6 +399,7 @@ h2#site-name {
   font-style: normal;
   color: #fff;
   -webkit-text-stroke: .08vw black;
+  text-shadow: 0px 0px 20px #000000;
   font-size: 3.07vw;
   text-align: left;
 }
