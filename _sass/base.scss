@@ -52,7 +52,7 @@ body {
 
 @media only screen and (max-width: 1023px) and (orientation: portrait) {
   .header-section {
-    background: url(../img/10-4-24_cloti-zineprint-mobile-crop.jpg?s) center bottom no-repeat;
+    background: url(../img/hero/vampire-seranade/serana-portrait.jpg?s) center bottom no-repeat;
     background-size: cover;
   }
 }
@@ -394,8 +394,15 @@ h2#site-name {
   font-weight: 400;
   font-style: normal;
   color: #fff;
+  -webkit-text-stroke: .08vw black;
   font-size: 3.07vw;
   text-align: left;
+}
+
+.cta_wrapper_title span {
+  text-align: end;
+  width: 100%;
+  display: block;
 }
 
 .cta_wrapper_title span.ctatitle.line1 {
@@ -408,6 +415,7 @@ h2#site-name {
 @media only screen and (max-width: 1024px) and (orientation: portrait) {
   .cta_wrapper_title {
     font-size: 8.2051vw;
+    -webkit-text-stroke: none;
   }
 
   .cta_wrapper_title span {
