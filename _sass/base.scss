@@ -573,7 +573,7 @@ h2#site-name {
 
 .swiper-music .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -593,6 +593,12 @@ h2#site-name {
 @media only screen and (min-width: 768px) {
   .swiper-music .swiper-slide {
     width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper-music .swiper-slide {
+    font-size: 4vw;
   }
 }
 
