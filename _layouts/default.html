@@ -278,77 +278,78 @@
         </div>
       </div>
     </div>
-    <code>
-$ train_jezuro.sh<br>
-<br>
-[1991-03-13 14:02:11] INFO  Starting training run: experiment=piano-pretrain<br>
-[1991-03-13 14:02:11] INFO  Loading configuration from ./configs/mother-train.yaml<br>
-[1991-03-13 14:02:16] INFO  Building dataset index...<br>
-[1991-03-13 14:02:21] INFO  Dataset loaded: 192 classical songs<br>
-[1991-03-13 14:02:21] INFO  Total tokens: ~312K<br>
-<br>
-[1995-06-19 17:09:14] INFO  Starting training run: experiment=vocal-pretrain<br>
-[1995-06-19 17:09:14] INFO  Loading configuration from ./configs/family-four-part-harmonies-train.yaml<br>
-[1995-06-19 17:09:19] INFO  Building dataset index...<br>
-[1995-06-19 17:09:31] INFO  Dataset loaded: 129 songs<br>
-[1995-06-19 17:09:31] INFO  Total tokens: ~243K<br>
-<br>
-[2002-02-24 15:23:45] INFO  Starting training run: experiment=guitar-pretrain<br>
-[2002-02-24 15:23:45] INFO  Loading configuration from ./configs/kpc-fingerstyle-train.yaml<br>
-[2002-02-24 15:23:45] INFO  Building dataset index...<br>
-[2002-02-24 15:23:45] INFO  Dataset loaded: 151 songs<br>
-[2002-02-24 15:23:45] INFO  Total tokens: ~274K<br>
-<br>
-[2002-02-24 15:23:45] INFO  Saving checkpoint: checkpoints/ckpt_childhood_musical_foundation_step_00020.pt<br>
-<br>
-[2002-08-12 09:43:23] INFO  Starting training run: experiment=pop-culture-pretrain<br>
-[2002-08-12 09:43:23] INFO  Loading configuration from ./configs/music-games-movies-tv-train.yaml<br>
-[2002-08-12 09:43:30] INFO  Building dataset index…<br>
-[2002-08-12 09:43:42] INFO  dataset=video-scifi-comedy-anime     docs=1.1K   tokens=21.4M   shards=32<br>
-[2002-08-12 09:43:48] INFO  dataset=games-with-good-stories-also-jet-moto-and-anything-starwars     docs=187   tokens=42.7M   shards=64<br>
-[2002-08-12 09:43:53] INFO  dataset=music-backstreetboys-creed-simpleplan-relientk-fmstatic-breakingbenjamin-beachboys-ratm-journey-mcr-chicago-zztop-elo-anamanaguchi-defleppard-acdc-lit-fountainsofwayne-sia-sinatra-2pac-zedd-queen-airsupply-cake-wigwam-blackeyedpeas-winger      docs=2.4K  tokens=55.1M   shards=256<br>
-[2002-08-12 09:43:59] INFO  Dataset loaded: 3687 media files<br>
-[2002-08-12 09:43:59] INFO  Total tokens: ~119.2M<br>
-<br>
-[2002-08-12 09:43:59] INFO  Training...<br>
-Step 00001 | loss=6.8814 | lr=2.8e-4 | tokens=0.5M | 151k tok/s<br>
-… <br>
-[2014-04-19 13:27:03] INFO  Saving checkpoint: checkpoints/ckpt_popculture_step_00020.pt<br>
-…<br>
-[2025-05-20 01:13:32] INFO  Step 004200 | loss=2.9143 | lr=1.8e-4 | tokens=119.1M | 152k tok/s<br>
-[2025-05-20 01:13:32] INFO  Saving checkpoint: checkpoints/ckpt_popculture_step_004200.pt<br>
-[2025-05-20 01:13:35] ERROR Failed to write checkpoint file<br>
-[2025-05-20 01:13:35] ERROR OSError: [Errno 28] No space left on device<br>
-[2025-05-20 01:13:37] FATAL Run terminated at step 4200<br>
-[2025-05-20 01:13:37] INFO  Last successful checkpoint: checkpoints/ckpt_popculture_step_004000.pt<br>
-[2025-05-20 01:13:38] INFO  Exiting with code 1<br>
-<br>
-$ run_jezuro_ai_collab.sh<br>
-<br>
-[2025-06-17 06:47:52] INFO Loading model... done (2.4s)<br>
-[2025-06-17 06:47:52] INFO Context size: 4096 tokens<br>
-[2025-06-17 06:47:52] INFO Ready.<br>
-<br>
-> This melody got stuck in my head back in 2006. It lingered for years—until I finally wrote lyrics in 2011. Recorded a rough demo in 2012. Give this track the bounce, clarity, and voice it needs to slap.<br>
-<br>
-[2025-09-23 03:22:50] INFO Generating “Bad Mosquitoes”...done<br>
-<br>
-> Here’s the lyrics for a hip hop song about Cloud and Tifa. I tried to get ChatGPT to write them, but they kinda sucked so I rewrote them all myself. The verses should be rapped by a male and the chorus sung by a female. Here’s a demo track I recorded with the chorus melody I want the female to sing, where the percussion should stop and start, and what the piano accompaniment should be.<br>
-<br>
-[2025-12-06 10:55:17] INFO Generating “Cloud and Tifa”...done<br>
-<br>
-> Let’s make a song about an NPC I spent way too much time playing dress up with back in 2013. Let’s call it “I’m in love with a vampire”. Let’s make it a jpop inspired bubblegum boy band nerdcore love anthem with rapped verses. No wait, “I’m in love with a vampire” will be the hook but the title will be “Vampire Seranade”. I like that. Here are the lyrics I wrote— most of—ChatGPT actually came up with a few banger lines I couldn’t pass on.<br>
-<br>
-[2026-02-02 13:21:18] INFO Generating “Vampire Seranade”...done<br>
-<br>
-[2026-03-13 14:04:37] INFO  Validation run started…<br>
-<br>
-                  | my kids           | my wife         | my mom   | real music artists<br>
-------------------------------------------------------------------------------------------<br>
-Bad Mosquitoes    | multi-platinum    | pretty good!    | amazing! | DQ (used AI)<br>
-Cloud and Tifa    | platinum          | huh?            | huh?     | DQ (used AI)<br>
-Vampire Seranade  | gold              | who's serana?   | ?        | DQ (used AI)<br>
-    </code>
+    <code><pre>
+$ train_jezuro.sh
+
+[1991-03-13 14:02:11] INFO  Starting training run: experiment=piano-pretrain
+[1991-03-13 14:02:11] INFO  Loading configuration from ./configs/mother-train.yaml
+[1991-03-13 14:02:16] INFO  Building dataset index...
+[1991-03-13 14:02:21] INFO  Dataset loaded: 192 classical songs
+[1991-03-13 14:02:21] INFO  Total tokens: ~312K
+
+[1995-06-19 17:09:14] INFO  Starting training run: experiment=vocal-pretrain
+[1995-06-19 17:09:14] INFO  Loading configuration from ./configs/family-four-part-harmonies-train.yaml
+[1995-06-19 17:09:19] INFO  Building dataset index...
+[1995-06-19 17:09:31] INFO  Dataset loaded: 129 songs
+[1995-06-19 17:09:31] INFO  Total tokens: ~243K
+
+[2002-02-24 15:23:45] INFO  Starting training run: experiment=guitar-pretrain
+[2002-02-24 15:23:45] INFO  Loading configuration from ./configs/kpc-fingerstyle-train.yaml
+[2002-02-24 15:23:45] INFO  Building dataset index...
+[2002-02-24 15:23:45] INFO  Dataset loaded: 151 songs
+[2002-02-24 15:23:45] INFO  Total tokens: ~274K
+
+[2002-02-24 15:23:45] INFO  Saving checkpoint: checkpoints/ckpt_childhood_musical_foundation_step_00020.pt
+
+[2002-08-12 09:43:23] INFO  Starting training run: experiment=pop-culture-pretrain
+[2002-08-12 09:43:23] INFO  Loading configuration from ./configs/music-games-movies-tv-train.yaml
+[2002-08-12 09:43:30] INFO  Building dataset index…
+[2002-08-12 09:43:42] INFO  dataset=video-scifi-comedy-anime     docs=1.1K   tokens=21.4M   shards=32
+[2002-08-12 09:43:48] INFO  dataset=games-with-good-stories-also-jet-moto-and-anything-starwars     docs=187   tokens=42.7M   shards=64
+[2002-08-12 09:43:53] INFO  dataset=music-backstreetboys-creed-simpleplan-relientk-fmstatic-breakingbenjamin-beachboys-ratm-journey-mcr-chicago-zztop-elo-anamanaguchi-defleppard-acdc-lit-fountainsofwayne-sia-sinatra-2pac-zedd-queen-airsupply-cake-wigwam-blackeyedpeas-winger      docs=2.4K  tokens=55.1M   shards=256
+[2002-08-12 09:43:59] INFO  Dataset loaded: 3687 media files
+[2002-08-12 09:43:59] INFO  Total tokens: ~119.2M
+
+[2002-08-12 09:43:59] INFO  Training...
+Step 00001 | loss=6.8814 | lr=2.8e-4 | tokens=0.5M | 151k tok/s
+… 
+[2014-04-19 13:27:03] INFO  Saving checkpoint: checkpoints/ckpt_popculture_step_00020.pt
+…
+[2025-05-20 01:13:32] INFO  Step 004200 | loss=2.9143 | lr=1.8e-4 | tokens=119.1M | 152k tok/s
+[2025-05-20 01:13:32] INFO  Saving checkpoint: checkpoints/ckpt_popculture_step_004200.pt
+[2025-05-20 01:13:35] ERROR Failed to write checkpoint file
+[2025-05-20 01:13:35] ERROR OSError: [Errno 28] No space left on device
+[2025-05-20 01:13:37] FATAL Run terminated at step 4200
+[2025-05-20 01:13:37] INFO  Last successful checkpoint: checkpoints/ckpt_popculture_step_004000.pt
+[2025-05-20 01:13:38] INFO  Exiting with code 1
+
+$ run_jezuro_ai_collab.sh
+
+[2025-06-17 06:47:52] INFO Loading model... done (2.4s)
+[2025-06-17 06:47:52] INFO Context size: 4096 tokens
+[2025-06-17 06:47:52] INFO Ready.
+
+> This melody got stuck in my head back in 2006. It lingered for years—until I finally wrote lyrics in 2011. Recorded a rough demo in 2012. Give this track the bounce, clarity, and voice it needs to slap.
+
+[2025-09-23 03:22:50] INFO Generating “Bad Mosquitoes”...done
+
+> Here’s the lyrics for a hip hop song about Cloud and Tifa. I tried to get ChatGPT to write them, but they kinda sucked so I rewrote them all myself. The verses should be rapped by a male and the chorus sung by a female. Here’s a demo track I recorded with the chorus melody I want the female to sing, where the percussion should stop and start, and what the piano accompaniment should be.
+
+[2025-12-06 10:55:17] INFO Generating “Cloud and Tifa”...done
+
+> Let’s make a song about an NPC I spent way too much time playing dress up with back in 2013. Let’s call it “I’m in love with a vampire”. Let’s make it a jpop inspired bubblegum boy band nerdcore love anthem with rapped verses. No wait, “I’m in love with a vampire” will be the hook but the title will be “Vampire Seranade”. I like that. Here are the lyrics I wrote— most of—ChatGPT actually came up with a few banger lines I couldn’t pass on.
+
+[2026-02-02 13:21:18] INFO Generating “Vampire Seranade”...done
+
+[2026-03-13 14:04:37] INFO  Validation run started…
+
+                  | my kids           | my wife         | my mom   | real music artists
+------------------------------------------------------------------------------------------
+Bad Mosquitoes    | multi-platinum    | pretty good!    | amazing! | DQ (used AI)
+Cloud and Tifa    | platinum          | huh?            | huh?     | DQ (used AI)
+Vampire Seranade  | gold              | who's serana?   | ?        | DQ (used AI)
+
+    </pre></code>
     <script src="https://libraries.wmgartistservices.com/externalJS/jquery-3-5-1-jquery-min.js"></script>
     <script src="https://libraries.wmgartistservices.com/externalJS/jquery-browser-0-1-0-jquery-browser-min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
