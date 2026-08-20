@@ -855,6 +855,14 @@ div#overlay-img-1 img, div#overlay-img-2 img {
   margin-right: 0;
 }
 
+.bio {
+  color: $socialColor;
+  text-align: left;
+  text-transform: none;
+  font-family: $menuItemsFont;
+  font-size: 1.8vw;
+}
+
 .copyrightWrapper {
   display: flex;
   align-items: center;
