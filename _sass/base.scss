@@ -812,7 +812,8 @@ div#overlay-img-1 img, div#overlay-img-2 img {
   line-height: 1.17;
   text-transform: capitalize;
   padding: 1.8vw 0;
-  display: block;
+  display: grid;
+  place-items: center;
   text-align: center;
 }
 
@@ -860,7 +861,8 @@ div#overlay-img-1 img, div#overlay-img-2 img {
   text-align: left;
   text-transform: none;
   font-family: $menuItemsFont;
-  font-size: 1.8vw;
+  font-size: 1.3rem;
+  max-width: 500px;
 }
 
 .copyrightWrapper {
