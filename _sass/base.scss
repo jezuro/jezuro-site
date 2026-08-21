@@ -858,12 +858,13 @@ div#overlay-img-1 img, div#overlay-img-2 img {
 
 .bio {
   color: $socialColor;
+  line-height: 1.6;
   padding: .5rem;
   text-align: left;
   text-transform: none;
   font-family: $menuItemsFont;
-  font-size: 1.3rem;
-  max-width: 550px;
+  font-size: 1.2rem;
+  max-width: 50ch;
 }
 
 .copyrightWrapper {
