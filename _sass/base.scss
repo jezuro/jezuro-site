@@ -857,14 +857,11 @@ div#overlay-img-1 img, div#overlay-img-2 img {
 }
 
 .bio {
-  color: black;
-  padding: 20px;
-  box-shadow: 10px 10px 20px -10px;
-  background-color: white;
-  margin-top: 25px;
+  color: $socialColor;
+  padding: .5rem;
   text-align: left;
   text-transform: none;
-  font-family: monospace;
+  font-family: $menuItemsFont;
   font-size: 1rem;
   max-width: 550px;
 }
